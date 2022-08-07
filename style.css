@@ -1,0 +1,308 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background: #4285F4;
+}
+.wrapper{
+    max-width: 500px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 25px 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    translate: 170% 0%;
+}
+@media (max-width: 768px) {
+
+    .wrapper {
+        max-width: 350px;
+        translate: 2% -30%;
+        height: 270px;
+        padding: 10px 10px;
+    }
+    .twitter {
+       content: "";
+       width: 40px;
+       position: relative;
+       bottom: 80px;
+       left: 250px;
+    }
+    .call {
+        content: "";
+        width: 10px;
+        height: 90px;
+        position: relative;
+        bottom: 154px;
+        left: 180px;
+    }
+    .wrapper1 {
+        max-width: 250px;
+        position: relative;
+        top: 280px;
+        right: 135px;
+        height: 200px;
+        padding: 10px 10px;
+        
+    }
+    .wrapper1 h1 {
+        font-size: 25px;
+        margin-top: 2px;
+    }
+    .wrapper1 p {
+        margin-top: 2px;
+    }
+    .wrapper1 input {
+        margin-top: 2px;
+    }
+    .wrapper p{
+        margin-top: 2px;
+        font-size: 12px;
+        color: #474747;
+    }
+    form{
+        margin: 20px 0 27px;
+    }
+    form input{
+        width: 100%;
+        height: 60px;
+        outline: none;
+        padding: 0 17px;
+        font-size: 19px;
+        border-radius: 5px;
+        border: 1px solid #b3b2b2;
+        transition: 0.1s ease;
+    }
+    .convert-button {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+}
+/*@media (max-width: 992px) {
+    .wrapper {
+        max-width: 500px;
+        translate: 40% 0%;
+    }
+    .twitter {
+       content: "";
+       width: 40px;
+       position: relative;
+       bottom: 80px;
+       left: 800px;
+    }
+    .call {
+        content: "";
+        width: 10px;
+        height: 90px;
+        position: relative;
+        bottom: 154px;
+        left: 700px;
+    }
+}
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 500px;
+        translate: 65% 0%;
+    }
+    .twitter {
+        content: "";
+        translate: 96% 1%;
+        padding: 1px 2px 39x;
+    }
+    .call {
+        content: "";
+        translate: 95% 0%;
+        height: 20px;
+        padding: 1px 2px 39x;
+        margin: 1px 2px 3px;
+    }
+    
+}*/
+header h1{
+    font-size: 27px;
+    font-weight: 500;
+}
+header p{
+    margin-top: 30px;
+    font-size: 18px;
+    color: #474747;
+}
+form{
+    margin: 20px 0 27px;
+}
+form input{
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0 17px;
+    font-size: 19px;
+    border-radius: 5px;
+    border: 1px solid #b3b2b2;
+    transition: 0.1s ease;
+}
+form input::placeholder{
+    color: #979797;
+}
+form input:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+form button{
+    width: 100%;
+    border: none;
+    opacity: 0.7;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 20px;
+    padding: 15px 0;
+    border-radius: 5px;
+    pointer-events: none;
+    background: #4285F4;
+    transition: opacity 0.15s ease;
+}
+form input:valid ~ button{
+    opacity: 1;
+    pointer-events: auto;
+}
+form input:focus {
+    border: 2px solid #0485ff;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(65, 170, 255);
+    overflow: hidden;
+}
+
+section .w {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./imgs/wave.png);
+    background-size: 1000px 100px;
+}
+
+section .w.w1 {
+    animation: anim 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+section .w.w2 {
+    animation: anim2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+section .w.w3 {
+    animation: anim 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+section .w.w4 {
+    animation: anim2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes anim {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+.twitter {
+    content: "";
+    translate: 96% 1%;
+    padding: 1px 2px 39x;
+}
+.call {
+    content: "";
+    translate: 95% 0%;
+    height: 20px;
+    padding: 1px 2px 39x;
+    margin: 1px 2px 3px;
+}
+
+.URL-input, .convert-button {
+    font-size: 1.3rem;
+    padding: 5px 10px;
+}
+
+.URL-input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0 17px;
+    font-size: 19px;
+    border-radius: 5px;
+    border: 1px solid #b3b2b2;
+    transition: 0.1s ease;
+    margin-top: 30px;
+}
+.URL-input:focus {
+    border: 2px solid #0485ff;
+}
+.convert-button {
+    width: 100%;
+    border: none;
+    opacity: 0.7;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 20px;
+    padding: 15px 0;
+    border-radius: 5px;
+    pointer-events: none;
+    background: #4285F4;
+    transition: opacity 0.15s ease;
+}
+.wrapper1  {
+    max-width: 506px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 25px 15px 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    translate: 35% -98%;
+    height: 352px;
+
+}
